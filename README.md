@@ -12,7 +12,7 @@ Usage example:
 2. Open a csv file: `csv.initialize("c:\file.csv");`
 3. Read one line at a time: `csv.readline;`
 4. Start reading values: `my_integer := csv.read_integer;`
-5. To read more values in the same line, call any of the read_* functions
+5. To read more values in the same line, call any of the read_* functions (`read_real`, `read_string`, `read_boolean`, etc.)
 6. To move to the next line, call csv.readline() again
 
 See a more complete example below or in the included testbench:
@@ -26,8 +26,8 @@ See a more complete example below or in the included testbench:
         variable read_real: real;
     begin
         puts("opening CSV files");
-        csv_file_1.initialize("c:\intel\projects\fpga\decision_tree_nsl_kdd\vhdl\testbench\data\test_file_1.csv");
-        csv_file_2.initialize("c:\intel\projects\fpga\decision_tree_nsl_kdd\vhdl\testbench\data\test_file_2.csv");
+        csv_file_1.initialize("c:\projects\vhdl-csv-file-reader\testbench\data\test_file_1.csv");
+        csv_file_2.initialize("c:\projects\vhdl-csv-file-reader\testbench\data\test_file_2.csv");
 
         puts("testing 1st line of the csv file: 1,abc,true,0.5,0110");
         csv_file_1.readline;
